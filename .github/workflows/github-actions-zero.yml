@@ -1,0 +1,38 @@
+name: GitHub Actions Zero 
+on:
+  push:
+    branches:
+      - main
+
+jobs: 
+  run-github-actions-env: 
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Show Trigger Event  
+        run: echo "This job was triggered by a ${{ github.event_name }} event." 
+
+      - name: Display OS Info 
+        run: echo "Environment information ${{ runner.os }}" 
+
+      - name: Display Branch and Repository Info 
+        run: echo "Current Branch ${{ github.ref }}, Repository Info ${{ github.repository }}." 
+
+      - name: Checkout Repository Code 
+        uses: actions/checkout@v2 
+
+      - name: Display Checkout Status 
+        run: echo "The ${{ github.repository }} was checkouted." 
+
+      - name: List Repository Files 
+        run: | 
+          ls ${{ github.workspace }} 
+
+      - name: Job result 
+        run: echo "Job result is ${{ job.status }}." 
+      - name: List Repository Files 
+        run: | 
+          ls ${{ github.workspace }} 
+
+      - name: Display Job Status 
+        run: echo "🍏 This job's status is ${{ job.status }}." 
