@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout Test') {
       steps {
-        sh 'git checkout -b test'
+        sh 'git checkout test'
       }
     }
 
