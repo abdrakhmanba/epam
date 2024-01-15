@@ -21,7 +21,7 @@ pipeline {
 
     stage('Build an docker image ') {
       steps {
-        sh 'docker build -t berikapps '
+        sh 'docker build -t berikapps .'
       }
     }
 
