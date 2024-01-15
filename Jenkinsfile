@@ -27,7 +27,8 @@ pipeline {
 
     stage('Docker Push') {
       steps {
-        sh 'docker image push'
+        sh 'docker tag berikapps abdrakhmanba/epam'
+        sh 'docker push abdrakhmanba/epam'
       }
     }
 
