@@ -1,6 +1,9 @@
 # Используем образ Ubuntu 22.04
 FROM ubuntu:22.04
 
+# Работаем от имени root
+USER root
+
 # Обновляем список пакетов и устанавливаем необходимые зависимости
 RUN apt-get update && \
     apt-get install -y python3 python3-pip
