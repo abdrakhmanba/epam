@@ -27,6 +27,7 @@ pipeline {
 
     stage('Docker Push') {
       steps {
+        sh 'docker login --username=abdrakhmanba --password=Nurgazin70@'
         sh 'docker tag berikapps abdrakhmanba/epam'
         sh 'docker push abdrakhmanba/epam'
       }
